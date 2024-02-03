@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block content %} 
+ <div class = "container"> 
+     <div class = "row my-5"> 
+         <div class = "col-md-12"> 
+             <form action = "{% url 'create-task' %}" method="post"  class="form">
+                  {% csrf_token %} 
+                 {{ form}} 
+                 <button type="submit" class="btn btn-primary">Add Task</button> 
+             </form> 
+         </div> 
+     </div> 
+ </div>
+ {% endblock %}
